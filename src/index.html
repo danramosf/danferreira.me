@@ -1,14 +1,42 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Danferreira</title>
-  <base href="/">
-
+  <title>DanFerreira Software Engineering</title>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta name="description" content="Personal portfolio website by Daniel Ferreira.">
+  <meta name="author" content="Daniel Ferreira">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" type="image/png" href="assets/images/DF_black.png" />
+
 </head>
 <body>
   <app-root></app-root>
+
+  <!-- Add Google Maps -->
+  <script>
+    function myMap() {
+      myCenter = new google.maps.LatLng(43.2386344, -79.7205817);
+      var mapOptions = {
+        center: myCenter,
+        zoom: 12, scrollwheel: false, draggable: false,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+      var map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
+
+      var marker = new google.maps.Marker({
+        position: myCenter,
+      });
+      marker.setMap(map);
+    }
+
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKTqj2sK9OT-mdGCoRjQ-DGrdzKBg3m8Y&callback=myMap"></script>
+  <!--
+  To use this code on your website, get a free API key from Google.
+  Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+  -->
 </body>
 </html>
